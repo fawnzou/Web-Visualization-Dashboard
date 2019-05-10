@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <!-- Required meta tags -->
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Title -->
+  <title>Bootstap Visualization Dashboard Temperature-Cloudiness</title> 
+
+
+  <style>
+    
+    #button{
+      background-color: rgb(41, 145, 136);
+      border:None;
+      margin-top: 0;
+      margin-bottom: 0;
+      }
+
+    .border{
+        border-radius: 25px;
+    }
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      text-align: center;
+    }
+  
+  </style>
+
+</head>
+
+<body style="background-color: rgba(229, 238, 237, 0.863);">
+  <!-- Navigation Section -->
+  <div class = "container-fluid" style="background-color: white"> 
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid" >
+          <div class="navbar-header">
+            <a class="btn btn-primary btn-lg" href="./index.html" role="button" id=button>Lantitude
+              </a>
+          </div>
+          <ul class="nav navbar-nav justify-content-end">
+            <div style="display: inline-block;">
+              <button class="navbar-toggler py-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+             </button>              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <li class="nav-item dropdown" >  
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plots</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="./temperature.html">Max Temperature</a>
+                      <a class="dropdown-item" href="./humidity.html">Humidity</a>
+                      <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+                      <a class="dropdown-item" href="./windspeed.html">Wind Speed</a>
+                    </div>
+                </li>
+            
+                <li class="nav-item" >
+                  <a class="nav-link" href="./comparison.html">Comparision</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" href="./data.html">Data</a>
+                </li>
+              </div>
+            </div>
+        </ul>
+      </nav>
+    </div>
+  
+ 
+  <!-- Main Section -->
+  <div class="container-fluid " style = "margin-top:20px;margin-bottom:30px; padding-left:0; " >
+    <div class="row justify-content-between">
+      <!-- Left Part -->
+      <div class= "col-lg-8 col-xs-8" style="margin-left:30px;" >
+        <div class="jumbotron bg-white">
+          <h2 style="color:rgb(41, 145, 136)">Cloudiness</h2>
+          <hr>
+          <img  src="Instructions\Resources\assets\images\Cloudiness.png" style="width:80%; display:block; margin: auto;" alt="">
+          <p align:"center"> No significant correlation was found between latitude and cloud cover. We describe the cloud cover as four 
+              different types: Clear (0-10%), Scattered (10-50%), Broken (50-90%), Overcast (90-100%). Among 542 cities, there are 187 
+              cities's skies are clear, 163 cities' cloud coverages are scattered.
+          </p>
+        </div>
+      </div>
+      <!-- Right Part -->
+      <div class="col-lg-3 col-xs-8 bg-white" style="margin-right:30px;height:400px;">
+        <h3 style="color: rgb(41, 145, 136);margin-top:10px;padding:30px;">Visualizations</h3>
+        <hr>
+        <a href="./temperature.html"><img class='sm-img' src="Instructions\Resources\assets\images\maxTemp.png" width="150" alt="Temperature"></a>
+        <a href="./humidity.html"><img class='sm-img' src="Instructions\Resources\assets\images\Humidity.png" width="150" alt="Humidity"></a>
+        <a href="./cloudiness.html"><img class='sm-img border border-secondary rounded' src="Instructions\Resources\assets\images\Cloudiness.png" width="150" alt="Cloudiness"></a> 
+        <a href="./windspeed.html"><img class='sm-img' src="Instructions\Resources\assets\images\Wind Speed.png"  width="150" alt="Wind Speed"></a>     
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer" >Latitude vs. Weather - by Fawn Zou</div>
+       
+</body>
+</html> 
